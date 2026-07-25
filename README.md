@@ -2,6 +2,9 @@
 
 Lumora is a bespoke interior design studio focused on quiet luxury, refined finishes, and thoughtful spatial design for high-end residential homes and boutique hospitality spaces.
 
+<img width="956" height="449" alt="image" src="https://github.com/user-attachments/assets/63ba8d6c-0ad6-4f08-ae5d-d938647e7e92" />
+
+
 ## Features
 
 - **Interactive Gallery & Portfolio**: Curated project showcases with smooth GSAP animations and filtering.
