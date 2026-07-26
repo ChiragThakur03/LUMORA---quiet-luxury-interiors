@@ -11,9 +11,12 @@ import Process from './components/Process';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Preloader from './components/Preloader';
 import { Enquiry } from './types';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   const [enquiries, setEnquiries] = useState<Enquiry[]>([]);
 
   // Load enquiries from LocalStorage on mount
@@ -193,6 +196,9 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#0B0A0A] text-neutral-100 overflow-x-hidden selection:bg-[#C5A880] selection:text-black">
+      {/* Luxury Brand Preloader Screen */}
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+
       {/* Absolute Grid overlay for general quiet luxury background details */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
 
